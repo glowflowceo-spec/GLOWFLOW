@@ -146,20 +146,19 @@
     <form class="form-card" id="inquiryForm">
       <p class="form-error" id="formError"><span lang="ko">전송 중 문제가 발생했습니다. 아래 "이메일 직접 보내기" 또는 전화로 연락 주시면 빠르게 확인하겠습니다.</span><span lang="en">Something went wrong while sending. Please use "Email Directly" below or call us, and we'll get back to you quickly.</span></p>
 
-      <input type="hidden" name="_subject" id="formSubject" value="[온라인 문의]">
-      <input type="hidden" name="_template" value="table">
-      <input type="hidden" name="_captcha" value="false">
+      <input type="hidden" name="access_key" value="60e0862b-696c-42ee-9c9a-68f00a5dc3c9">
+      <input type="hidden" name="subject" id="formSubject" value="[온라인 문의]">
       <input type="text" name="_honey" style="display:none" tabindex="-1" autocomplete="off">
 
       <div class="f-group">
         <div class="f-row">
           <div>
             <label for="org"><span lang="ko">기관·기업명</span><span lang="en">Organization / Company</span><span class="req">*</span></label>
-            <input type="text" id="org" name="기관·기업명" required placeholder="예: 글로우플로우">
+            <input type="text" id="org" required placeholder="예: 글로우플로우">
           </div>
           <div>
             <label for="name"><span lang="ko">담당자명</span><span lang="en">Contact Person</span><span class="req">*</span></label>
-            <input type="text" id="name" name="담당자명" required placeholder="예: 김정안">
+            <input type="text" id="name" required placeholder="예: 김정안">
           </div>
         </div>
       </div>
@@ -168,29 +167,29 @@
         <div class="f-row">
           <div>
             <label for="phone"><span lang="ko">연락처</span><span lang="en">Phone Number</span><span class="req">*</span></label>
-            <input type="tel" id="phone" name="연락처" required placeholder="010-0000-0000">
+            <input type="tel" id="phone" required placeholder="010-0000-0000">
           </div>
           <div>
             <label for="email"><span lang="ko">이메일</span><span lang="en">Email</span><span class="opt" lang="ko">(선택)</span><span class="opt" lang="en">(optional)</span></label>
-            <input type="email" id="email" name="이메일" placeholder="example@email.com">
+            <input type="email" id="email" name="email" placeholder="example@email.com">
           </div>
         </div>
       </div>
 
       <div class="f-group">
         <label for="purpose"><span lang="ko">진행 목적 및 기대 결과물</span><span lang="en">Purpose & Expected Outcome</span><span class="req">*</span></label>
-        <textarea id="purpose" name="진행 목적 및 기대 결과물" required placeholder="예: 팀 간 소통 방식 개선, 신입사원 대상 팀빌딩, 조직 비전 수립 등"></textarea>
+        <textarea id="purpose" required placeholder="예: 팀 간 소통 방식 개선, 신입사원 대상 팀빌딩, 조직 비전 수립 등"></textarea>
       </div>
 
       <div class="f-group">
         <div class="f-row">
           <div>
             <label for="target"><span lang="ko">참여 대상 및 인원</span><span lang="en">Audience & Headcount</span><span class="opt" lang="ko">(선택)</span><span class="opt" lang="en">(optional)</span></label>
-            <input type="text" id="target" name="참여 대상 및 인원" placeholder="예: 팀장급 30명">
+            <input type="text" id="target" placeholder="예: 팀장급 30명">
           </div>
           <div>
             <label for="schedule"><span lang="ko">희망 시기</span><span lang="en">Preferred Timing</span><span class="opt" lang="ko">(선택)</span><span class="opt" lang="en">(optional)</span></label>
-            <input type="text" id="schedule" name="희망 시기" placeholder="예: 2026년 9월 중">
+            <input type="text" id="schedule" placeholder="예: 2026년 9월 중">
           </div>
         </div>
       </div>
@@ -198,16 +197,16 @@
       <div class="f-group">
         <label><span lang="ko">진행 형태</span><span lang="en">Format</span><span class="opt" lang="ko">(선택)</span><span class="opt" lang="en">(optional)</span></label>
         <div class="radio-group">
-          <label class="radio-pill"><input type="radio" name="진행 형태" value="오프라인"><span lang="ko">오프라인</span><span lang="en">In-person</span></label>
-          <label class="radio-pill"><input type="radio" name="진행 형태" value="온라인"><span lang="ko">온라인</span><span lang="en">Online</span></label>
-          <label class="radio-pill"><input type="radio" name="진행 형태" value="혼합(하이브리드)"><span lang="ko">혼합(하이브리드)</span><span lang="en">Hybrid</span></label>
-          <label class="radio-pill"><input type="radio" name="진행 형태" value="미정"><span lang="ko">아직 미정</span><span lang="en">Not decided yet</span></label>
+          <label class="radio-pill"><input type="radio" name="format" value="오프라인"><span lang="ko">오프라인</span><span lang="en">In-person</span></label>
+          <label class="radio-pill"><input type="radio" name="format" value="온라인"><span lang="ko">온라인</span><span lang="en">Online</span></label>
+          <label class="radio-pill"><input type="radio" name="format" value="혼합(하이브리드)"><span lang="ko">혼합(하이브리드)</span><span lang="en">Hybrid</span></label>
+          <label class="radio-pill"><input type="radio" name="format" value="미정"><span lang="ko">아직 미정</span><span lang="en">Not decided yet</span></label>
         </div>
       </div>
 
       <div class="f-group">
         <label for="etc"><span lang="ko">기타 요청사항</span><span lang="en">Additional Notes</span><span class="opt" lang="ko">(선택)</span><span class="opt" lang="en">(optional)</span></label>
-        <textarea id="etc" name="기타 요청사항" placeholder="장소, 예산 관련 문의, 사전 참고자료 등 자유롭게 남겨주세요"></textarea>
+        <textarea id="etc" placeholder="장소, 예산 관련 문의, 사전 참고자료 등 자유롭게 남겨주세요"></textarea>
       </div>
 
       <button type="submit" class="btn-submit" id="submitBtn"><span class="btn-label" lang="ko">작성한 내용으로 문의 보내기 →</span><span class="btn-label" lang="en">Send Inquiry →</span></button>
@@ -282,7 +281,6 @@ if(langSwitch){
   applyLang(savedLang === 'en' ? 'en' : 'ko');
 }
 
-var GLOWFLOW_INQUIRY_EMAIL = 'glowflowceo@naver.com';
 var form = document.getElementById('inquiryForm');
 var errorBox = document.getElementById('formError');
 var submitBtn = document.getElementById('submitBtn');
@@ -311,9 +309,25 @@ form.addEventListener('submit', function(e){
   submitBtn.disabled = true;
   setSubmitState('sending');
 
-  var data = new FormData(form);
+  var formatEl = form.querySelector('input[name="format"]:checked');
+  var koMessage = [
+    '기관·기업명: ' + (form.org.value || ''),
+    '담당자명: ' + (form.name.value || ''),
+    '연락처: ' + (form.phone.value || ''),
+    '이메일: ' + (form.email.value || '(미입력)'),
+    '진행 목적 및 기대 결과물: ' + (form.purpose.value || ''),
+    '참여 대상 및 인원: ' + (form.target.value || '(미입력)'),
+    '희망 시기: ' + (form.schedule.value || '(미입력)'),
+    '진행 형태: ' + (formatEl ? formatEl.value : '(미입력)'),
+    '기타 요청사항: ' + (form.etc.value || '(미입력)')
+  ].join('\n\n');
 
-  fetch('https://formsubmit.co/ajax/' + GLOWFLOW_INQUIRY_EMAIL, {
+  var data = new FormData(form);
+  data.set('message', koMessage);
+  data.delete('format');
+  data.delete('_honey');
+
+  fetch('https://api.web3forms.com/submit', {
     method: 'POST',
     headers: { 'Accept': 'application/json' },
     body: data
@@ -324,7 +338,7 @@ form.addEventListener('submit', function(e){
   })
   .then(function(json){
     if(json && (json.success === false || json.success === 'false')){
-      throw new Error(json.message || 'formsubmit reported failure');
+      throw new Error(json.message || 'web3forms reported failure');
     }
   })
   .then(function(){
